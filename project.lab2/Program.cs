@@ -1,15 +1,16 @@
 ﻿using System;
 
+// ชื่อ - นามสกุล: นายปรมัตถ์ เชื้อเมืองพาน
+// Section: 129C
+// รหัสนักศึกษา: 1690702772
+// เลขที่: N / A
+
 namespace project129C
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-
-        //งาน PART A
-
-
             string bossName = "Kirin";          // string เอาไว้เก็บข้อความตัวอักษร "..."
             Char rank = 'S';                    // char เอาไว้เก็บตัวอักษรตัวตวเดียวใน '.'
             int level = 7;                       // int เอาไว้เก็บจำนวนเต็มบวก,เต็มลบ,0
@@ -41,11 +42,7 @@ namespace project129C
             Console.WriteLine($"HP; {currentHP} / {maxHp}");
             hpPercent = currentHP * 100 / maxHp;
 
-
-
-            //งาน PART B
-
-            string roleName = "Wizard";          
+            string roleName = "Wizard";                                  //งาน PART B
             Char rank = 'B';                   
             int level = 14;                       
             int maxHp = 100;
@@ -53,9 +50,8 @@ namespace project129C
             double critMultiplier = 1.2;          
             bool isMagic = true;                 
 
-            //ประกาศตัวแปร6ตัว
             Console.WriteLine("===== Wizard STATUS: INITIAL =====");
-            Console.WriteLine($"Name: {mobName}");
+            Console.WriteLine($"Name: {roleName}");
             Console.WriteLine($"Rank: {rank}");
             Console.WriteLine($"HP: {maxHp}");
             Console.WriteLine($"Attack power:  {attackPower}");
@@ -70,7 +66,6 @@ namespace project129C
             double critMultiplier = 1.5;          
             bool isMagic = false;                 
 
-            //ประกาศตัวแปร6ตัว
             Console.WriteLine("===== Sword Man STATUS: INITIAL =====");
             Console.WriteLine($"Name: {roleName}");
             Console.WriteLine($"Rank: {rank}");
@@ -87,7 +82,6 @@ namespace project129C
             double critMultiplier = 1.5;          
             bool isMagic = false;                 
 
-            //ประกาศตัวแปร6ตัว
             Console.WriteLine("===== Doctor STATUS: INITIAL =====");
             Console.WriteLine($"Name: {roleName}");
             Console.WriteLine($"Rank: {rank}");
@@ -104,7 +98,6 @@ namespace project129C
             double critMultiplier = 1.2;          
             bool isMagic = true;                 
 
-            //ประกาศตัวแปร6ตัว
             Console.WriteLine("===== Priest STATUS: INITIAL =====");
             Console.WriteLine($"Name: {roleName}");
             Console.WriteLine($"Rank: {rank}");
