@@ -38,6 +38,7 @@ namespace project129C
             Console.WriteLine();
             // ลด HP 60 หน่วย
             Console.WriteLine();
+            currentHP -= 60;
             Console.WriteLine("===== BOSS STATUS: AFTER DAMAGE =====");
             Console.WriteLine($"HP; {currentHP} / {maxHp}");
             hpPercent = currentHP * 100 / maxHp;
