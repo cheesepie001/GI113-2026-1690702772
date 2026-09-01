@@ -110,6 +110,59 @@ namespace project129C
             Console.WriteLine($"Attack power:  {attackPower4}");
             Console.WriteLine($"CritMultiplier: {critMultiplier4}");
             Console.WriteLine($"Is Magic: {isMagic4}");
+
+
+            // ปริ้นข้อมูลซ้ำแบบแรก โดยการประกาศตัวแปรใหม่ให้ครบทุกตัวละคร
+            string hero2Name = "Min";
+            int hp2 = 200;
+            int atk2 = 300;
+            Console.WriteLine("======== HERO 1 =========");
+            Console.WriteLine($"NAME: {heroName}");
+            Console.WriteLine("======== HERO 2 =========");
+            Console.WriteLine($"NAME: {hero2Name}");
+
+            // ปริ้นข้อมูลซ้ำแบบสอง โดยการเปลี่ยนค่าของตัวแปร
+            Console.WriteLine("*_*_*_*_METHOD 2_*_*_*_*");
+            Console.WriteLine("======== HERO 1 =========");
+            Console.WriteLine($"NAME: {heroName}"); // ยังใช้ค่าเดิม ชื่อ Max
+            Console.WriteLine($"HP: {hp}"); // HP เดิม 100
+
+            heroName = "Min"; // เปลี่ยนค่าเป็น Min
+            hp = 300;   // เปลี่ยนเป็น 300
+            Console.WriteLine("======== HERO 2 =========");
+            Console.WriteLine($"NAME: {heroName}"); // ปริ้นออกมาได้ Min
+            Console.WriteLine($"HP: {hp}");
+
+            heroName = "Sum"; // เปลี่ยนค่าเป็น Sum
+            hp = 500;   // เปลี่ยนเป็น 500
+            Console.WriteLine("======== HERO 3 =========");
+            Console.WriteLine($"NAME: {heroName}"); // ปริ้นออกมาได้ Sum
+            Console.WriteLine($"HP: {hp}");
+
+            // การปริ้นลง Console เว้น บรรทัด #1
+            Console.WriteLine();
+            // การปริ้นลง Console เว้น บรรทัด #2
+            Console.WriteLine("\n");
+
+            // Example 1
+            Console.WriteLine("I GO TO SCHOOL");
+            Console.WriteLine(); //เว้นบรรทัด
+            Console.WriteLine("I AM HUNGRY");
+            // Example 2
+            Console.WriteLine("I GO TO SCHOOL\n"); // เว้นบรรทัด
+            Console.WriteLine("I AM HUNGRY");
+
+            // format การพิมพ์ข้อความ
+            // Example 1 การพิมพ์ทีละบรรทัด
+            Console.WriteLine("I AM SLEEPY");
+            Console.WriteLine("I GO TO SLEEP");
+            Console.WriteLine("I WOKE UP");
+            // Example 2 การพิมพ์แบบประหยัดบรรทัดโค๊ด
+            Console.WriteLine("I AM SLEEPY\nI GO TO SLEEP\nI WOKE UP");
+            // Example 3 Hybrid รวมทั้งสองแบบ
+            Console.WriteLine("I AM SLEEPY" +
+                "\nI GO TO SLEEP" +
+                "\nI WOKE UP");
         }
     }
 }
