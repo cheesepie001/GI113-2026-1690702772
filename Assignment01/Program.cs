@@ -41,9 +41,9 @@ namespace Assignment01
             double heroDmgAsDouble = heroDmg; 
             Console.WriteLine($"Damage as double (implicit): {heroDmgAsDouble}");
 
-            int heroDmgAsInt = (int)heroDmgAsDouble;               
-            int critMultiplierAsInt = Convert.ToInt32(critMultiplier);      
-            Console.WriteLine($"Damage cast (truncates)  : {heroDmgAsInt}");
+            int critMultiplierAsInt = (int)critMultiplier;               
+            int critRateAsInt = Convert.ToInt32(critRate);      
+            Console.WriteLine($"Crit Rate cast (truncates)  : {critRateAsInt}");
             Console.WriteLine($"Crit Damage Convert (rounds)  : {critMultiplierAsInt}");
             Console.WriteLine($" ============================================================= ");
         }
