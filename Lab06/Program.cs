@@ -1,4 +1,9 @@
-﻿namespace Lab06
+﻿// ชื่อ - นามสกุล: นายปรมัตถ์ เชื้อเมืองพาน
+// Section: 129C
+// รหัสนักศึกษา: 1690702772
+// เลขที่: 23
+
+namespace Lab06
 {
     internal class Program
     {
