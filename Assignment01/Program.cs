@@ -36,6 +36,7 @@ namespace Assignment01
             Console.WriteLine($"|Crit DMG    : {critMultiplier}");
             Console.WriteLine($"|Magic DMG   : {useMagic}|");
             Console.WriteLine($" ============================================================= ");
+            Console.WriteLine($"////////////////////////////////////\r\n//.--..-.   .---. .--..-.   .---. //\r\n//|-< | |__ | | | |-< | |__ | | | //\r\n//`--'`----'`-^-' `--'`----'`-^-' //\r\n////////////////////////////////////");
 
             Console.WriteLine();
             double heroDmgAsDouble = heroDmg; 
