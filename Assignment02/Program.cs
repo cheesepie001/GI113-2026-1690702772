@@ -20,105 +20,78 @@ namespace Assignment02
 
             char Forge = 'f';
             char Recycle = 'r';
-            Console.WriteLine($"Forge Ores ==> Ingots : {Forge}");
-            Console.WriteLine($"Recycle Ingots ==> Ores : {Recycle}");
+            Console.WriteLine($"Forge Diamond Ores ==> Diamond Ingots : {Forge}");
+            Console.WriteLine($"Recycle Diamond Ingots ==> Diamond Ores : {Recycle}");
             Console.Write($"Choose menu : ");
-            bool userinput = char.TryParse(Console.ReadLine(), out char choice);
+            char.TryParse(Console.ReadLine(), out char choice);
 
-            if (choice == Forge || choice == Recycle)
+            if (choice != Forge && choice != Recycle && choice != 'F' && choice != 'R')
             {
-
-
-                int demonOre = 1;
-                int angleOre = 2;
-
                 Console.WriteLine();
-                Console.WriteLine($"Demonite : {demonOre}");
-                Console.WriteLine($"Anglelite : {angleOre}");
-                Console.Write($"Which type of ore/ingot would you like to forge/recycle? : ");
-                bool userinput2 = int.TryParse(Console.ReadLine(), out int oreType);
-
-                if (oreType == demonOre && choice == Forge)
-                {
-                    Console.WriteLine();
-                    Console.Write($"How many ores would you like to forge? : ");
-                    bool userinput4 = int.TryParse(Console.ReadLine(), out int forgeAmount);
-
-                    if (userinput4 != false && forgeAmount > 0 )
-                    {
-                        double demonIngots = forgeAmount * 0.5;
-                        Console.WriteLine($"You have successfully forged {demonIngots} Demon Ingots!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid number.");
-                    }
-                }
-                else if (oreType == demonOre && choice == Recycle)
-                {
-                    Console.WriteLine();
-                    Console.Write($"How many ingots would you like to recycle? : ");
-                    bool userinput5 = int.TryParse(Console.ReadLine(), out int recycleAmount);
-
-                    if (userinput5 != false && recycleAmount > 0)
-                    {
-                        double recycleOres = recycleAmount * 1.3;
-                        Console.WriteLine($"You have successfully recycled {recycleOres} Ores!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid number.");
-                    }
-                }
-                //else
-                //{
-                    //Console.WriteLine();
-                    //Console.WriteLine("Invalid input. Please enter 1 for Demonite or 2 for Anglelite.");
-                //}
-                if (oreType == angleOre && choice == Forge)
-                {
-                    Console.WriteLine();
-                    Console.Write($"How many ores would you like to forge? : ");
-                    bool userinput6 = int.TryParse(Console.ReadLine(), out int forgeAmount);
-
-                    if (userinput6 != false && forgeAmount > 0)
-                    {
-                        double angleIngots = forgeAmount * 0.5;
-                        Console.WriteLine($"You have successfully forged {angleIngots} Angle Ingots!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid number.");
-                    }
-                }
-                else if (oreType == angleOre && choice == Recycle)
-                {
-                    Console.WriteLine();
-                    Console.Write($"How many ingots would you like to recycle? : ");
-                    bool userinput7 = int.TryParse(Console.ReadLine(), out int recycleAmount);
-
-                    if (userinput7 != false && recycleAmount > 0)
-                    {
-                        double recycleOres = recycleAmount * 1.3;
-                        Console.WriteLine($"You have successfully recycled {recycleOres} Ores!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid number.");
-                    }
-
-
-                }
-                else if (oreType != demonOre && oreType != angleOre)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Invalid input. Please enter 1 for Demonite or 2 for Anglelite.");
-                }
-
+                Console.WriteLine($"Invalid choice. Please choose either '{Forge}' or '{Recycle}'.");
 
             }
-            
+
+            if (choice == Forge || choice == 'F' || (choice != Forge && choice != Recycle))
+            {
+                Console.WriteLine();
+                Console.WriteLine($"You choose Forge Diamond Ores ==> Diamond Ingots");
+                Console.WriteLine($"How many diamond ores do you want to forge?");
+                Console.Write($"Enter number of diamond ores : ");
+                bool oresInput = int.TryParse(Console.ReadLine(), out int inputOres);
+
+                if (oresInput && inputOres > 0)
+                {
+
+                    int ingots = inputOres * 2;
+                    Console.WriteLine();
+                    Console.WriteLine($"You have forged Diamond Ores to {ingots} Diamond Ingots.");
+                }
+                else if (!oresInput || inputOres <= 0)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"Invalid input. Please enter a positive number of diamond ores.");
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"Invalid choice. Please choose either '{Forge}' or '{Recycle}'.");
+
+
+                }
+            }
+
+
+                if (choice == Recycle || choice == 'R')
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"You choose Recycle Diamond Ingots ==> Diamond Ores");
+                    Console.WriteLine($"How many diamond ingots do you want to recycle?");
+                    Console.Write($"Enter number of diamond ingots : ");
+                    bool ingotsInput = int.TryParse(Console.ReadLine(), out int inputIngots);
+
+                    if (ingotsInput && inputIngots > 0)
+                    {
+                        float ores = inputIngots * 0.25f;
+                        Console.WriteLine($"You have recycled Diamond Ingots to {ores} Diamond Ores.");
+                    }
+                    else if (!ingotsInput || inputIngots <= 0)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"Invalid input. Please enter a positive number of diamond ingots.");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"Invalid choice. Please choose either '{Forge}' or '{Recycle}'.");
+
+
+                    }
+                }
+            }
         }
     }
-}
+
+
 
