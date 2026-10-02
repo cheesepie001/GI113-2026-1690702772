@@ -177,6 +177,8 @@ namespace Lab07
                 default:
                     Console.WriteLine("Please type y or n.");
                     break;
+
+                    //5 case & switch expression
             }
 
         }
