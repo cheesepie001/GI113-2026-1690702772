@@ -85,6 +85,7 @@ namespace Assignment02
                     {
                         Console.WriteLine();
                         Console.WriteLine($"Invalid choice. Please choose either '{Forge}' or '{Recycle}'.");
+                    //f & r
 
 
                     }
