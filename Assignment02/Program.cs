@@ -1,4 +1,9 @@
-﻿namespace Assignment02
+﻿// ชื่อ - นามสกุล: นายปรมัตถ์ เชื้อเมืองพาน
+// Section: 129C
+// รหัสนักศึกษา: 1690702772
+// เลขที่: 23
+
+namespace Assignment02
 {
     internal class Program
     {
