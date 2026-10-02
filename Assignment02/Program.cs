@@ -13,6 +13,8 @@ namespace Assignment02
             Console.WriteLine($"|     Welcome to the Golden Backsmith       |");
             Console.WriteLine($"=============================================");
             Console.WriteLine();
+            Console.WriteLine($"*******************************************************************************\r\n* .88888.           dP       dP                                               *\r\n*d8'   `88          88       88                                               *\r\n*88        .d8888b. 88 .d888b88 .d8888b. 88d888b.                             *\r\n*88   YP88 88'  `88 88 88'  `88 88ooood8 88'  `88                             *\r\n*Y8.   .88 88.  .88 88 88.  .88 88.  ... 88    88                             *\r\n* `88888'  `88888P' dP `88888P8 `88888P' dP    dP                             *\r\n*ooooooooooooooooooooooooooooooooooooooooooooooooo                            *\r\n*                                                                             *\r\n* 888888ba                    dP                           oo   dP   dP       *\r\n* 88    `8b                   88                                88   88       *\r\n*a88aaaa8P' .d8888b. .d8888b. 88  .dP  .d8888b. 88d8b.d8b. dP d8888P 88d888b. *\r\n* 88   `8b. 88'  `88 88'  `\"\" 88888\"   Y8ooooo. 88'`88'`88 88   88   88'  `88 *\r\n* 88    .88 88.  .88 88.  ... 88  `8b.       88 88  88  88 88   88   88    88 *\r\n* 88888888P `88888P8 `88888P' dP   `YP `88888P' dP  dP  dP dP   dP   dP    dP *\r\n*ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo*\r\n*******************************************************************************");
+            Console.WriteLine();
             Console.WriteLine($"What are you looking to do today?");
             Console.WriteLine();
 
@@ -20,7 +22,7 @@ namespace Assignment02
             char Recycle = 'r';
             Console.WriteLine($"Forge Ores ==> Ingots : {Forge}");
             Console.WriteLine($"Recycle Ingots ==> Ores : {Recycle}");
-            Console.Write($"Choose f or r: ");
+            Console.Write($"Choose menu : ");
             bool userinput = char.TryParse(Console.ReadLine(), out char choice);
 
             if (choice == Forge || choice == Recycle)
@@ -42,7 +44,7 @@ namespace Assignment02
                     Console.Write($"How many ores would you like to forge? : ");
                     bool userinput4 = int.TryParse(Console.ReadLine(), out int forgeAmount);
 
-                    if (userinput4 != false)
+                    if (userinput4 != false && forgeAmount > 0 )
                     {
                         double demonIngots = forgeAmount * 0.5;
                         Console.WriteLine($"You have successfully forged {demonIngots} Demon Ingots!");
@@ -57,7 +59,8 @@ namespace Assignment02
                     Console.WriteLine();
                     Console.Write($"How many ingots would you like to recycle? : ");
                     bool userinput5 = int.TryParse(Console.ReadLine(), out int recycleAmount);
-                    if (userinput5 != false)
+
+                    if (userinput5 != false && recycleAmount > 0)
                     {
                         double recycleOres = recycleAmount * 1.3;
                         Console.WriteLine($"You have successfully recycled {recycleOres} Ores!");
@@ -78,7 +81,7 @@ namespace Assignment02
                     Console.Write($"How many ores would you like to forge? : ");
                     bool userinput6 = int.TryParse(Console.ReadLine(), out int forgeAmount);
 
-                    if (userinput6 != false)
+                    if (userinput6 != false && forgeAmount > 0)
                     {
                         double angleIngots = forgeAmount * 0.5;
                         Console.WriteLine($"You have successfully forged {angleIngots} Angle Ingots!");
@@ -93,7 +96,8 @@ namespace Assignment02
                     Console.WriteLine();
                     Console.Write($"How many ingots would you like to recycle? : ");
                     bool userinput7 = int.TryParse(Console.ReadLine(), out int recycleAmount);
-                    if (userinput7 != false)
+
+                    if (userinput7 != false && recycleAmount > 0)
                     {
                         double recycleOres = recycleAmount * 1.3;
                         Console.WriteLine($"You have successfully recycled {recycleOres} Ores!");
@@ -105,7 +109,7 @@ namespace Assignment02
 
 
                 }
-                else
+                else if (oreType != demonOre && oreType != angleOre)
                 {
                     Console.WriteLine();
                     Console.WriteLine("Invalid input. Please enter 1 for Demonite or 2 for Anglelite.");
@@ -113,11 +117,7 @@ namespace Assignment02
 
 
             }
-            else
-            {
-                Console.WriteLine();
-                Console.WriteLine("Invalid input. Please enter f for forge or r for recycle.");
-            }
+            
         }
     }
 }
